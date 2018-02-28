@@ -1,0 +1,52 @@
+// Place all the styles related to the restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.home-page-header {
+  text-align: center;
+}
+
+.restaurants-list {
+  list-style: none;
+  padding: 16px;
+}
+
+.restaurants-list-item {
+  list-style: none;
+  padding: 8px;
+}
+
+.reviews-container {
+  padding: 20px;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .reviews-form{
+    display: flex;
+    width: 80%;
+  }
+
+
+  .reviews-list {
+    width: 100%;
+    padding: 30px;
+    ul {
+      padding: 10px;
+    }
+
+    li {
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      .review-list-item-text{
+        padding: 10px
+      }
+      .review-list-item-stars{
+        padding:5px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,6 @@
+<h1 class="home-page-header">Welcome to Yelp</h1>
+<ul class="restaurants-list">
+  <% @restaurants.each do |restaurant| %>
+    <li class="restaurants-list-item"> <%= link_to restaurant.name, restaurant_path(restaurant)  %></li>
+  <% end %>
+</ul>

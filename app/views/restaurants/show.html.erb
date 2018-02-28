@@ -1,0 +1,32 @@
+<h3><%= @restaurant.name %></h3>
+<div class="restaurant-info-card">
+  <h4>Address: <%= @restaurant.address %></h4>
+  <h4>Phone Number: <%= @restaurant.phone_number %></h4>
+  <h4>Category: <%= @restaurant.category.capitalize %></h4>
+</div>
+
+<div class="reviews-container">
+  <div class="reviews-form">
+    <%= render 'reviews/form' %>
+  </div>
+
+  <div class="reviews-list">
+    <ul>
+      <% @restaurant.reviews.reverse.each do |reviews| %>
+        <li>
+          <div class="review-list-item-text">
+            <%= reviews.content[0..50] %>
+          </div>
+          <div class="review-list-item-stars">
+            <% reviews.rating.times do %>
+              <i class="fas fa-star"></i>
+            <% end %>
+            <% (5 - reviews.rating).times do %>
+              <i class="far fa-star"></i>
+            <% end %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
